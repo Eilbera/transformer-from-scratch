@@ -24,11 +24,10 @@ Final validation loss: 1.54 after after 2k steps
 - **Added early stopping** (patience of 5 evaluations)
 
   
-## Learnings
-- Multi-head attention took model from val loss of above 3 to around 1.54
-- Proper weight initialization for deep networks
-- Training dynamics and hyperparameter tuning
-- Early stopping with patience
+## What I learned
+
+- **Generation broke after ~256 characters** because the model was fed positions it never saw in training. Cropping the input to the training context length fixed it.
+- **Overfitting:** without dropout, train loss reached 1.15 vs. validation 1.54. 
 
 ## Sample output
 
