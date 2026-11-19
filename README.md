@@ -14,6 +14,16 @@ Built following Andrej Karpathy’s “Let’s build GPT: from scratch, in code,
 ## Results
 Final validation loss: 1.54 after after 2k steps
 
+## What I changed
+
+- **Scaled the model up:** 8 layers, 12 heads, 768 embedding dimensions (57.5M parameters), vs. the tutorial's 6 layers, 6 heads, 384 dimensions
+- **Restructured attention:** a single Q/K/V projection per layer split into heads via reshaping, instead of separate head modules
+- **Added weight initialization** (normal, std 0.02)
+- **Added a cosine learning-rate schedule**
+- **Added gradient clipping** (max norm 1.0)
+- **Added early stopping** (patience of 5 evaluations)
+
+  
 ## Learnings
 - Multi-head attention took model from val loss of above 3 to around 1.54
 - Proper weight initialization for deep networks
