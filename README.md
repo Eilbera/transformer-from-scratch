@@ -2,7 +2,7 @@
 
 Character-level transformer language model built from scratch in PyTorch. Trained on Shakespeare's works.
 
-Built following Andrej Karpathy’s “Let’s build GPT: from scratch, in code, spelled out” tutorial, then scaled up and experimented with on my own.
+Built following Andrej Karpathy’s “Let’s build GPT: from scratch, in code, spelled out” video, then scaled up and experimented with on my own.
 
 
 ## Architecture
