@@ -12,7 +12,7 @@ Built following Andrej Karpathy’s “Let’s build GPT: from scratch, in code,
 - 57.5M parameters 
 
 ## Results
-Final validation loss: 1.54 after after 2k steps
+Final validation loss: 1.54 after 2k steps
 
 ## What I changed
 
@@ -26,7 +26,7 @@ Final validation loss: 1.54 after after 2k steps
   
 ## What I learned
 
-- **Generation broke after ~256 characters** because the model was fed positions it never saw in training. Cropping the input to the training context length fixed it.
+- **Generation broke after ~256 characters** because the model was fed positions it never saw in training. The fix is cropping the input to the training context length.
 - **Overfitting:** without dropout, train loss reached 1.15 vs. validation 1.54. 
 
 ## Sample output
